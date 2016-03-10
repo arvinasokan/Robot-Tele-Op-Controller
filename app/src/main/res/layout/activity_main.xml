@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+
+<RelativeLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:id="@+id/button_layout">
+    <Button
+        android:layout_width="80dp"
+        android:layout_height="100dp"
+        android:text="torso up"
+        android:id="@+id/torso_up"
+        android:layout_below="@+id/connect"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:layout_width="80dp"
+        android:layout_height="100dp"
+        android:text="torso down"
+        android:id="@+id/torso_down"
+        android:layout_below="@+id/torso_up"
+        android:layout_alignLeft="@+id/torso_up"
+        android:layout_alignStart="@+id/torso_up" />
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:text="Arm tuck"
+        android:id="@+id/arm_tuck"
+        android:layout_alignBottom="@+id/torso_up"
+        android:layout_toLeftOf="@+id/torso_up"
+        android:layout_toStartOf="@+id/torso_up" />
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:text="close gripper"
+        android:id="@+id/close_gripper"
+        android:layout_alignTop="@+id/torso_down"
+        android:layout_alignLeft="@+id/arm_tuck"
+        android:layout_alignStart="@+id/arm_tuck" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="HEAD TILT"
+        android:id="@+id/textView"
+        android:layout_above="@+id/head_tilt"
+        android:layout_alignLeft="@+id/head_tilt"
+        android:layout_alignStart="@+id/head_tilt"
+        android:layout_marginLeft="26dp"
+        android:layout_marginStart="26dp" />
+    <ToggleButton
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:text="Head tilt"
+        android:id="@+id/head_tilt"
+        android:checked="false"
+        android:layout_above="@+id/close_gripper"
+        android:layout_toLeftOf="@+id/arm_tuck"
+        android:layout_toStartOf="@+id/arm_tuck" />
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:text="open gripper"
+        android:id="@+id/open_gripper"
+        android:layout_alignTop="@+id/close_gripper"
+        android:layout_toLeftOf="@+id/arm_tuck"
+        android:layout_toStartOf="@+id/arm_tuck" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_vertical_margin"
+        android:text="0"
+        android:id="@+id/hello_world"
+        tools:context=".MainActivity" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:id="@+id/hello_world2"
+        tools:context=".MainActivity"
+        android:layout_below="@+id/hello_world"
+        android:layout_alignLeft="@+id/hello_world"
+        android:layout_alignStart="@+id/hello_world" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:id="@+id/hello_world3"
+        tools:context=".MainActivity"
+        android:layout_below="@+id/hello_world2"
+        android:layout_alignLeft="@+id/hello_world2"
+        android:layout_alignStart="@+id/hello_world2" />
+
+
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView"
+        android:layout_toLeftOf="@+id/head_tilt"
+        android:layout_below="@+id/head_tilt"
+        android:layout_toRightOf="@+id/hello_world3"
+        android:layout_toEndOf="@+id/hello_world3" />
+
+
+    <ToggleButton
+        android:layout_width="90dp"
+        android:layout_height="50dp"
+        android:text="Connect"
+        android:id="@+id/connect"
+        android:layout_alignTop="@+id/hello_world"
+        android:layout_toRightOf="@+id/ip_address"
+        android:layout_toEndOf="@+id/ip_address" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:id="@+id/ip_address"
+        android:layout_alignBottom="@+id/connect"
+        android:layout_alignLeft="@+id/head_tilt"
+        android:layout_alignStart="@+id/head_tilt" />
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/iv"/>
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:id="@+id/hello_world4"
+        android:layout_alignTop="@+id/torso_up"
+        android:layout_alignLeft="@+id/hello_world2"
+        android:layout_alignParentStart="@+id/hello_world2"
+        android:layout_alignParentLeft="@+id/hello_world2"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_joystick"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:background="@drawable/image_button_bg"
+        android:layout_alignParentBottom="true">
+    </RelativeLayout>
+</RelativeLayout>
